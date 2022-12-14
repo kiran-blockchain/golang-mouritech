@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+func recoveryFunction() {
+	// Recover from panic and print erro message
+	if panicMessage := recover(); 
+	panicMessage != nil {
+		fmt.Println(panicMessage)
+	}
+	fmt.Println("End: recoveryFunction")
+}
+
+func executePanic() {
+	// Defer function call
+	
+	// Throw panic
+	panic("I got panicked")
+	recoveryFunction()
+	fmt.Println("End: executePanic")
+}
+
+func main() {
+	executePanic()
+	fmt.Println("End: main")
+}

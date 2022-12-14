@@ -1,1 +1,1 @@
-# golang-mouritech
+# hcl-golang
