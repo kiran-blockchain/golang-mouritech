@@ -6,6 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func AppRoutes(router *gin.Engine){
-	router.POST("/create",controllers.CreateUser())
+func AppRoutes(router *gin.Engine) {
+	router.POST("/create", controllers.CreateUser())
+	router.GET("/getall", controllers.GetAllUsers())
 }
