@@ -7,5 +7,5 @@ import (
 )
 
 func AppRoutes(router *gin.Engine){
-	router.GET("/",controllers.DefaultRoute)
+	router.POST("/create",controllers.CreateUser())
 }
