@@ -1,0 +1,25 @@
+Step 1 - Build your repository pattern
+  - Models
+  - Db connection
+  - Model based methods
+     - users
+     - products
+     - orders
+
+
+Step -2  Build controller
+  - Define the interface methods
+  - Create controller methods 
+  - Inject the repository created in step1 to controller
+  - Implement the interface methods
+
+Step -3 Build router
+  - Import/inject the controller instances 
+  - Define the routes and attach controller methods to the router
+
+Step -4 
+    build main file and called router
+
+
+
+
