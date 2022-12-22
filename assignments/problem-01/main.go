@@ -3,12 +3,14 @@ package main
 import (
 	"fmt"
 	"time"
+
+	"problem-01/mockstream"
 )
 
-func producer(stream Stream) (tweets []*Tweet) {
+func producer(stream mockstream.Stream) (tweets []*mockstream.Tweet) {
 	for {
 		tweet, err := stream.Next()
-		if err == ErrEOF {
+		if err == mockstream.ErrEOF {
 			return tweets
 		}
 
@@ -16,7 +18,7 @@ func producer(stream Stream) (tweets []*Tweet) {
 	}
 }
 
-func consumer(tweets []*Tweet) {
+func consumer(tweets []*mockstream.Tweet) {
 	for _, t := range tweets {
 		if t.IsTalkingAboutGo() {
 			fmt.Println(t.Username, "\ttweets about golang")
@@ -28,7 +30,7 @@ func consumer(tweets []*Tweet) {
 
 func main() {
 	start := time.Now()
-	stream := GetMockStream()
+	stream := mockstream.GetMockStream()
 
 	// Producer
 	tweets := producer(stream)

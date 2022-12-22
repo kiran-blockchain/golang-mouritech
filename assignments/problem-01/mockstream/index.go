@@ -4,7 +4,7 @@
 // Your task is to edit `main.go`
 //
 
-package main
+package mockstream
 
 import (
 	"errors"
