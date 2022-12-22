@@ -38,4 +38,3 @@ func main() {
 
 	fmt.Printf("Process took %s\n", time.Since(start))
 }
-Footer
